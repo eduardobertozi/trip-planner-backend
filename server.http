@@ -1,0 +1,17 @@
+POST http://localhost:3333/trips
+Content-Type: application/json
+
+{
+  "destination": "Brasília",
+  "starts_at": "2024-07-12T09:00:00",
+  "ends_at": "2024-07-26T09:00:00",
+  "owner_name": "Diego Fernandes",
+  "owner_email": "diego@rockeseat.com.br",
+  "emails_to_invite": [
+    "eduardo@gmail.com",
+    "johndoe@acme.com"
+  ]
+}
+
+###
+GET http://localhost:3333/trips/dfb2d7d5-6c30-48fd-aa41-7e0b7e1698cd/confirm
