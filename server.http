@@ -1,6 +1,7 @@
 ### Environments
 @baseUrl = http://localhost:3333
-@tripId = 569a67c6-5638-4dde-9be0-8d630836daa2
+#569a67c6-5638-4dde-9be0-8d630836daa2
+@tripId = 569a67c6-5638-4dde-9be0-8d630836daa2A
 @ownerId = fe6d84cd-3f6a-4567-aeac-0157282c1d9d
 @participantId = 34c853df-3505-48e7-88a2-c0e5ba15cfcb
 
