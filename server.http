@@ -1,3 +1,11 @@
+### Environments
+@baseUrl = http://localhost:3333
+@tripId = 569a67c6-5638-4dde-9be0-8d630836daa2
+@ownerId = fe6d84cd-3f6a-4567-aeac-0157282c1d9d
+@participantId = 34c853df-3505-48e7-88a2-c0e5ba15cfcb
+
+### --------- Trips --------- ###
+# Create Trip
 POST http://localhost:3333/trips
 Content-Type: application/json
 
@@ -14,4 +22,72 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3333/trips/dfb2d7d5-6c30-48fd-aa41-7e0b7e1698cd/confirm
+# Update Trip
+PUT {{baseUrl}}/trips/{{tripId}}
+Content-Type: application/json
+
+{
+  "destination": "Florianópolis, SC",
+  "starts_at": "2024-07-12T09:00:00",
+  "ends_at": "2024-07-26T09:00:00"
+}
+
+###
+# Trip Details
+GET {{baseUrl}}/trips/{{tripId}}
+
+###
+# Confirm Trip
+GET {{baseUrl}}/trips/{{tripId}}/confirm
+
+###
+# Confirm Participant
+GET {{baseUrl}}/participants/{{participantId}}/confirm
+
+
+### --------- Activities --------- ###
+# Create Activity
+POST {{baseUrl}}/trips/{{tripId}}/activities
+Content-Type: application/json
+
+{
+  "title": "Almoçar no restaurante irlandês",
+  "occurs_at": "2024-07-15T12:00:00"
+}
+
+###
+# List Activities
+GET {{baseUrl}}/trips/{{tripId}}/activities
+
+
+### --------- Links --------- ###
+# Create Link
+POST {{baseUrl}}/trips/{{tripId}}/links
+Content-Type: application/json
+
+{
+  "title": "Reserva do AirBnB",
+  "url": "https://airbnb.com/reserva-journey"
+}
+
+###
+# List Links
+GET {{baseUrl}}/trips/{{tripId}}/links
+
+
+### --------- Participants --------- ###
+# List Participants
+GET {{baseUrl}}/trips/{{tripId}}/participants
+
+###
+# Participant Details
+GET {{baseUrl}}/participants/{{participantId}}
+
+###
+# Create Invite
+POST {{baseUrl}}/trips/{{tripId}}/invites
+Content-Type: application/json
+
+{
+  "email": "john.doe@acme.com"
+}

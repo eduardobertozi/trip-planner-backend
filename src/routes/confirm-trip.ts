@@ -64,12 +64,13 @@ export async function confirmTrip(app: FastifyInstance) {
             address: 'oi@plann.er',
           },
           to: participant.email,
-          subject: `Confirme sua viagem para ${trip.destination}`,
+          subject: `Confirme sua presença na viagem para ${trip.destination} em ${formattedStartDate}`,
           html: /*html*/`
             <div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
-              <p>Você solicitou a criação de uma viagem para <strong>${trip.destination}</strong> nas datas de <strong>${formattedStartDate} a ${formattedEndDate}</strong></p>
+              <p>Você foi convidado(a) para participar de uma viagem para <strong>${trip.destination}</strong> nas datas de <strong>${formattedStartDate} a ${formattedEndDate}</strong></p>
               <p></p>
-              <p>Para confirmar sua viagem, clique no link abaixo.</p>
+              <p>Para confirmar sua presença na viagem, clique no link abaixo:</p>
+              <p></p>
               <p>
                 <a href="${confirmationLink}">Confirmar viagem</a>
               </p>
