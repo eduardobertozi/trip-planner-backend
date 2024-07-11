@@ -1,5 +1,11 @@
 # Trip Planner Backend
 
+This repo was created to practice backend development with Nodejs.
+All knowledge applied here was taught through rocketseat's NLW by instructor Diego Fernandes
+
+- https://github.com/Rocketseat
+- https://github.com/diego3g
+
 # Pre-requisites
 
 - Install [Node.js](https://nodejs.org/en/) version 20^
